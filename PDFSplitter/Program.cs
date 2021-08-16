@@ -31,6 +31,17 @@ namespace PDFSplitter
 
             var doc = PdfReader.Open(combinedPDFPath, PdfDocumentOpenMode.Import);
 
+            var documentName = Path.GetFileNameWithoutExtension(combinedPDFPath);
+
+            var dir = Path.GetDirectoryName(combinedPDFPath);
+
+            var outputPath = Path.Combine(dir, documentName);
+
+            if (! Directory.Exists( outputPath ) )
+            {
+                Directory.CreateDirectory(outputPath);
+            }
+
             for(int pageNumber = 0; pageNumber < doc.PageCount; pageNumber++)
             {
                 var page = doc.Pages[pageNumber];
@@ -46,7 +57,7 @@ namespace PDFSplitter
 
                 var splitdoc = new PdfSharp.Pdf.PdfDocument();
                 splitdoc.AddPage(page);
-                var filename = name + ".pdf";
+                var filename = outputPath + "\\" + name + ".pdf";
                 splitdoc.Save(filename);
                 splitdoc.Close();
                 Console.WriteLine("Saved page " + filename);
