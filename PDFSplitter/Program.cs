@@ -73,13 +73,13 @@ namespace PDFSplitter
         {
             // TODO: Validate input arguments
 
-            int beginIndex = text.IndexOf(left); // find occurence of left delimiter
+            int beginIndex = text.IndexOf(left); // find occurrence of left delimiter
             if (beginIndex == -1)
                 return string.Empty; // or throw exception?
 
             beginIndex += left.Length;
 
-            int endIndex = text.IndexOf(right, beginIndex); // find occurence of right delimiter
+            int endIndex = text.IndexOf(right, beginIndex); // find occurrence of right delimiter
             if (endIndex == -1)
                 return string.Empty; // or throw exception?
 

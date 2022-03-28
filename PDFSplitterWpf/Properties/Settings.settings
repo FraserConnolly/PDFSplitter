@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PDFSplitterWpf.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="StartText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">This is to certify that</Value>
+    </Setting>
+    <Setting Name="EndText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">has completed</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
