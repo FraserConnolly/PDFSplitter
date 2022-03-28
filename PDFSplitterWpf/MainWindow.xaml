@@ -6,14 +6,15 @@
         xmlns:local="clr-namespace:PDFSplitterWpf"
         mc:Ignorable="d"
         Title="PDF Splitter V1.0" 
-        Height="450" Width="800" ResizeMode="NoResize">
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize">
     <Window.DataContext>
         <local:SplitterVM/>
     </Window.DataContext>
-    <Grid>
+    <Grid Height="475" Width="700">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="450"/>
             <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -22,7 +23,7 @@
             <RowDefinition Height="45"/>
             <RowDefinition Height="45"/>
             <RowDefinition Height="45"/>
-            <RowDefinition Height="115*"/>
+            <RowDefinition Height="190"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
